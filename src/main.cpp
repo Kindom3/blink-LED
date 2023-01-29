@@ -1,26 +1,9 @@
 #include <Arduino.h>
-
-int ledPin = 5;
-int buttonApin = 9;
-int buttonBpin = 8;
-
 void setup() {
-  // put your setup code here, to run once:
-  pinMode(ledPin, OUTPUT);
-  pinMode(buttonApin, INPUT_PULLUP);
-  pinMode(buttonBpin, INPUT_PULLUP);
+  Serial.begin(9600);
 }
-
-
+ 
 void loop() {
-  // put your main code here, to run repeatedly:
- if (digitalRead(buttonApin) == LOW)
- {
-  digitalWrite(ledPin, HIGH);
-  }
-if (digitalRead(buttonBpin) == LOW)
-{
-  digitalWrite(ledPin, LOW);
-
-  }
+  Serial.println("hello!");
+  delay(1000);
 }
